@@ -1,5 +1,5 @@
 import numpy as np
-from tensorflow.keras import datasets, utils, layers, models, optimizers
+from tensorflow.keras import datasets, layers, models, optimizers, utils
 
 if __name__ == "__main__":
     (x_train, y_train), (x_test, y_test) = datasets.cifar10.load_data()
@@ -102,8 +102,3 @@ if __name__ == "__main__":
     history = model.fit(x_train, y_train, batch_size=32, epochs=10, shuffle=True)
 
     model.evaluate(x_test, y_test)
-
-
-
-
-
